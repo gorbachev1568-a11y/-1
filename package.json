@@ -1,0 +1,29 @@
+{
+  "name": "bot-panel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"tsx watch src/server.ts\" \"tsx watch src/bot.ts\"",
+    "build": "tsc",
+    "start": "concurrently \"node dist/server.js\" \"node dist/bot.js\"",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "basic-auth": "^2.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/basic-auth": "^1.1.8",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "concurrently": "^8.2.2",
+    "prisma": "^5.14.0",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  }
+}
